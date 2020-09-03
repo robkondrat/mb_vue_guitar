@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img width="50" alt="Vue logo" src="./assets/logo.png">
+    <h1>Mintbean Guitar</h1>
+    <Fretboard msg="Welcome to Mintbean Guitar"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Fretboard from './components/Fretboard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Fretboard
   }
 }
 </script>
