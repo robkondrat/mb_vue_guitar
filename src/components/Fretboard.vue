@@ -1,104 +1,103 @@
 <template>
   <div>
     <div class="fretboard">
-      <div class="fret">
-        E
+      <div class="fret" v-on:click="playNote()">
+        E5
       </div>
-      <div class="fret">
-        F
+      <div class="fret" v-on:click="playNote()">
+        F5
       </div>
-      <div class="fret">
-        F#
+      <div class="fret" v-on:click="playNote()">
+        F#5
       </div>
-      <div class="fret">
-        G
+      <div class="fret" v-on:click="playNote()">
+        G5
       </div>
-      <div class="fret">
-        G#
+      <div class="fret" v-on:click="playNote()">
+        G#5
       </div>
-      <div class="fret">
-        B
+      <div class="fret" v-on:click="playNote()">
+        B4
       </div>
-      <div class="fret">
-        C
+      <div class="fret" v-on:click="playNote()">
+        C5
       </div>
-      <div class="fret">
-        C#
+      <div class="fret" v-on:click="playNote()">
+        C#5
       </div>
-      <div class="fret">
-        D
+      <div class="fret" v-on:click="playNote()">
+        D5
       </div>
-      <div class="fret">
-        D#
+      <div class="fret" v-on:click="playNote()">
+        D#5
       </div>
-      <div class="fret">
-        G
+      <div class="fret" v-on:click="playNote()">
+        G4
       </div>
-      <div class="fret">
-        G#
+      <div class="fret" v-on:click="playNote()">
+        G#4
       </div>
-      <div class="fret">
-        A
+      <div class="fret" v-on:click="playNote()">
+        A4
       </div>
-      <div class="fret">
-        A#
+      <div class="fret" v-on:click="playNote()">
+        A#4
       </div>
-      <div class="fret">
-        B
+      <div class="fret" v-on:click="playNote()">
+        B4
       </div>
-      <div class="fret">
-        D
+      <div class="fret" v-on:click="playNote()">
+        D4
       </div>
-      <div class="fret">
-        D#
+      <div class="fret" v-on:click="playNote()">
+        D#4
       </div>
-      <div class="fret">
-        E
+      <div class="fret" v-on:click="playNote()">
+        E4
       </div>
-      <div class="fret">
-        F
+      <div class="fret" v-on:click="playNote()">
+        F4
       </div>
-      <div class="fret">
-        F#
+      <div class="fret" v-on:click="playNote()">
+        F#4
       </div>
-      <div class="fret">
-        A
+      <div class="fret" v-on:click="playNote()">
+        A3
       </div>
-      <div class="fret">
-        A#
+      <div class="fret" v-on:click="playNote()">
+        A#3
       </div>
-      <div class="fret">
-        B
+      <div class="fret" v-on:click="playNote()">
+        B3
       </div>
-      <div class="fret">
-        C
+      <div class="fret" v-on:click="playNote()">
+        C4
       </div>
-      <div class="fret">
-        C#
+      <div class="fret" v-on:click="playNote()">
+        C#4
       </div>
-      <div class="fret">
-        E
+      <div class="fret" v-on:click="playNote()">
+        E3
       </div>
-      <div class="fret">
-        F
+      <div class="fret" v-on:click="playNote()">
+        F3
       </div>
-      <div class="fret">
-        F#
+      <div class="fret" v-on:click="playNote()">
+        F#3
       </div>
-      <div class="fret">
-        G
+      <div class="fret" v-on:click="playNote()">
+        G3
       </div>
-      <div class="fret" v-on:click="playC()">
-        G#
+      <div class="fret" v-on:click="playNote()">
+        G#3
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 import { Synth } from 'tone'
-
-
 
 export default {
   name: 'Fretboard',
@@ -106,9 +105,11 @@ export default {
     msg: String
   },
   methods: {
-    playC() {
+    playNote() {
+      const note = event.target.innerText
+      console.log(note)
       this.synth = new Synth().toDestination();
-      this.synth.triggerAttackRelease("C4","8n")
+      this.synth.triggerAttackRelease(note, "8n")
     }
   }
 }
