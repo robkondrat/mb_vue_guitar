@@ -88,7 +88,7 @@
       <div class="fret">
         G
       </div>
-      <div class="fret">
+      <div class="fret" v-on:click="playC()">
         G#
       </div>
     </div>
@@ -96,10 +96,20 @@
 </template>
 
 <script>
+import { Synth } from 'tone'
+
+
+
 export default {
   name: 'Fretboard',
   props: {
     msg: String
+  },
+  methods: {
+    playC() {
+      this.synth = new Synth().toDestination();
+      this.synth.triggerAttackRelease("C4","8n")
+    }
   }
 }
 </script>
