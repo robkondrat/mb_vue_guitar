@@ -32,7 +32,7 @@ export default {
       { message: "G#4" },
       { message: "A4" },
       { message: "A#4" },
-      { message: "B4" },
+      { message: "b4" },
       { message: "D4" },
       { message: "D#4" },
       { message: "E4" },
@@ -80,8 +80,20 @@ a {
 .fretboard {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-template-rows: auto;
+  grid-column-gap: none;
+  grid-row-gap: 5px;
+  font-size: auto;
+  border: 2px solid black;
+  cursor: url(https://www.pinclipart.com/picdir/middle/83-837567_png-file-finger-pointing-down-transparent-clipart.png), auto;
 }
+.fret {
+  background-color: brown;
+}
+.fret:nth-last-child(5n) {
+  background-color: grey;
+  border-right: 2px solid black;
+}
+
 
 </style>
