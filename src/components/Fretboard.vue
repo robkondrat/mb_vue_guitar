@@ -54,6 +54,7 @@ export default {
   methods: {
     playNote() {
       const note = event.target.innerText
+      console.log(note);
       this.synth = new Synth().toDestination();
       this.synth.triggerAttackRelease(note, "8n")
     }
@@ -84,18 +85,20 @@ a {
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto;
   grid-column-gap: none;
-  grid-row-gap: 5px;
+  grid-row-gap: none;
   font-size: auto;
   color: white;
   border: 2px solid black;
+
   cursor: url('../assets/hand2.png') 20 50, auto;
 
-  /* background-image: url('https://nitrocdn.com/ALFEQUmvsEMJgKUTFPKxqWKbcAzrkMCE/assets/static/source/rev-a97901e/wp-content/uploads/2019/12/Fretboard-Inlays-01_2.jpg');
+  background-image: url('https://media.istockphoto.com/photos/natural-wood-texture-picture-id1145602814?k=6&m=1145602814&s=612x612&w=0&h=2uVxc6l0CPalA8JV8XqpMcVVLrP9r-zr5jttpByEX-0=');
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
 }
 .fret {
-  background-color: brown;
+  border-bottom: 1px solid black;
+  border-right: 2px solid white;
 }
 .fret:nth-last-child(5n) {
   background-color: grey;
