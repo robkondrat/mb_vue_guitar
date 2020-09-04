@@ -63,6 +63,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+body {
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -84,8 +86,13 @@ a {
   grid-column-gap: none;
   grid-row-gap: 5px;
   font-size: auto;
+  color: white;
   border: 2px solid black;
-  cursor: url(https://www.pinclipart.com/picdir/middle/83-837567_png-file-finger-pointing-down-transparent-clipart.png), auto;
+  cursor: url('../assets/hand2.png') 20 50, auto;
+
+  /* background-image: url('https://nitrocdn.com/ALFEQUmvsEMJgKUTFPKxqWKbcAzrkMCE/assets/static/source/rev-a97901e/wp-content/uploads/2019/12/Fretboard-Inlays-01_2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 .fret {
   background-color: brown;
