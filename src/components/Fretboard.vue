@@ -90,7 +90,7 @@ a {
 
   cursor: url('../assets/yellowhand.png') 20 80, auto;
 
-  background-image: url('https://media.istockphoto.com/photos/natural-wood-texture-picture-id1145602814?k=6&m=1145602814&s=612x612&w=0&h=2uVxc6l0CPalA8JV8XqpMcVVLrP9r-zr5jttpByEX-0=');
+  background-image: url('../assets/wood.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
