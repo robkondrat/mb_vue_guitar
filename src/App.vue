@@ -2,7 +2,8 @@
   <div id="app">
     <img width="50" alt="Vue logo" src="./assets/logo.png">
     <h1>Mintbean Guitar</h1>
-    <Fretboard msg="Welcome to Mintbean Guitar"/>
+    <!-- <a href="/about">About</a> -->
+    <Fretboard />
   </div>
 </template>
 

@@ -12,9 +12,6 @@ import { Synth } from 'tone'
 
 export default {
   name: 'Fretboard',
-  props: {
-    msg: String
-  },
   data() {
     return {
       notes: [
@@ -54,7 +51,7 @@ export default {
   methods: {
     playNote() {
       const note = event.target.innerText
-      console.log(note);
+      // console.log(note);
       this.synth = new Synth().toDestination();
       this.synth.triggerAttackRelease(note, "8n")
     }
@@ -89,8 +86,9 @@ a {
   font-size: auto;
   color: white;
   border: 2px solid black;
+  margin: 10px;
 
-  cursor: url('../assets/hand2.png') 20 50, auto;
+  cursor: url('../assets/yellowhand.png') 20 80, auto;
 
   background-image: url('https://media.istockphoto.com/photos/natural-wood-texture-picture-id1145602814?k=6&m=1145602814&s=612x612&w=0&h=2uVxc6l0CPalA8JV8XqpMcVVLrP9r-zr5jttpByEX-0=');
   background-repeat: no-repeat;
